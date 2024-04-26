@@ -6,7 +6,14 @@ public class PrimeFactor {
         List<Integer> factors = new ArrayList<>();
 
         if (number > 1) {
-            factors.add(number);
+            if (number == 4) {
+                while (number % 2 == 0) {
+                    factors.add(2);
+                    number /= 2;
+                }
+            } else {
+                factors.add(number);
+            }
         }
 
         return factors;
